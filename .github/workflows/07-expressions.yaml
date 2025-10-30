@@ -1,11 +1,12 @@
 name: 07 - Using Expressions
+run-name: Using Expressions | DEBUG - ${{ inputs.debug && 'ON' || 'OFF' }}
 
 on:
-  push:
   workflow_dispatch:
-    debug:
-      type: boolean
-      default: false
+    inputs:
+      debug:
+        type: boolean
+        default: false
 
 jobs:
   echo:
